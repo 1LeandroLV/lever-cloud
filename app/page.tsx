@@ -30,28 +30,43 @@ export default function Home() {
     ["⚙", "Automatiserade flöden"],
   ];
 
- const projects = [
-  {
-    image: "/project-4.png",
-    title: "Premium Landing Page",
-    text: "En premium startsida som får företaget att kännas modernt och professionellt direkt när kunden öppnar sidan. Perfekt för företag som vill sticka ut, bygga förtroende och få fler bokningar online.",
-  },
-  {
-    image: "/project-2.png",
-    title: "Admin Dashboard",
-    text: "Ett internt adminsystem där företaget kan hantera bokningar, kunder, betalningar och personal på ett och samma ställe. Ger bättre struktur och sparar tid varje dag.",
-  },
-  {
-    image: "/project-3.png",
-    title: "Smart Booking Flow",
-    text: "Ett smart bokningsflöde där kunder enkelt kan välja tjänst, datum och skicka bokning direkt från mobilen. Snabbt, tydligt och byggt för att öka konverteringar.",
-  },
-  {
-    image: "/project-1.png",
-    title: "Employee System",
-    text: "Ett personalsystem där anställda kan logga in, se sina jobb och hantera uppdrag direkt från mobilen. Perfekt för företag som vill växa och organisera sitt team bättre.",
-  },
-];
+  const projects = [
+    {
+      images: [
+        "/IMG_4418.jpeg",
+        "/project-4.png",
+        "/IMG_4416.jpeg",
+        "/IMG_4417.jpeg",
+      ],
+      title: "Premium Landing Page",
+      text: "En premium startsida som får företaget att kännas modernt och professionellt direkt när kunden öppnar sidan. Perfekt för företag som vill sticka ut, bygga förtroende och få fler bokningar online.",
+    },
+    {
+      images: [
+        "/IMG_4408.jpeg",
+        "/IMG_4410.png",
+        "/IMG_4411.jpeg",
+        "/IMG_4412.jpeg",
+      ],
+      title: "Admin Dashboard",
+      text: "Ett internt adminsysten där företaget kan hantera bokningar, kunder, betalningar och personal på ett och samma ställe. Ger bättre struktur och sparar tid varje dag.",
+    },
+    {
+      images: ["/project-3.png", "/IMG_4413.png", "/IMG_4414.png"],
+      title: "Smart Booking Flow",
+      text: "Ett smart bokningsflöde där kunder enkelt kan välja tjänst, datum och skicka bokning direkt från mobilen. Snabbt, tydligt och byggt för att öka konverteringar.",
+    },
+    {
+      images: [
+        "/IMG_4419.jpeg",
+        "/IMG_4420.jpeg",
+        "/IMG_4421.jpeg",
+        "/IMG_4422.jpeg",
+      ],
+      title: "Employee System",
+      text: "Ett personalsystem där anställda kan logga in, se sina jobb och hantera uppdrag direkt från mobilen. Perfekt för företag som vill växa och organisera sitt team bättre.",
+    },
+  ];
 
   return (
     <main className="min-h-screen overflow-hidden bg-[#020714] text-white">
@@ -60,7 +75,7 @@ export default function Home() {
       {/* NAVBAR */}
       <nav className="border-b border-white/10 bg-black/20">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <div className="text-2xl const projefont-bold tracking-tight">
+          <div className="text-2xl font-bold tracking-tight">
             lever<span className="text-blue-400">.cloud</span>
           </div>
 
@@ -193,13 +208,26 @@ export default function Home() {
                 key={project.title}
                 className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] transition hover:border-blue-400/40"
               >
-                <div className="relative h-[420px] bg-[#050b18]">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-contain p-5"
-                  />
+                <div className="bg-[#050b18] p-5">
+                  <div className="grid grid-cols-2 gap-4">
+                    {project.images.map((img, imgIndex) => (
+                      <div
+                        key={imgIndex}
+                        className={`relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 ${
+                          project.images.length === 3 && imgIndex === 2
+                            ? "col-span-2 h-52"
+                            : "h-52"
+                        }`}
+                      >
+                        <Image
+                          src={img}
+                          alt={`${project.title} screenshot ${imgIndex + 1}`}
+                          fill
+                          className="object-contain p-5"
+                        />
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
                 <div className="p-6">
