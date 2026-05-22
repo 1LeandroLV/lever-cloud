@@ -49,7 +49,7 @@ export default function Home() {
         "/IMG_4412.jpeg",
       ],
       title: "Admin Dashboard",
-      text: "Ett internt adminsysten där företaget kan hantera bokningar, kunder, betalningar och personal på ett och samma ställe. Ger bättre struktur och sparar tid varje dag.",
+      text: "Ett internt adminsystem där företaget kan hantera bokningar, kunder, betalningar och personal på ett och samma ställe. Ger bättre struktur och sparar tid varje dag.",
     },
     {
       images: ["/project-3.png", "/IMG_4413.png", "/IMG_4414.png"],
@@ -237,6 +237,29 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="mt-20 text-center">
+            <p className="text-sm font-bold uppercase tracking-[0.3em] text-blue-400">
+              Live demo
+            </p>
+
+            <h3 className="mt-4 text-3xl font-bold text-white md:text-4xl">
+              Vill du se projektet live?
+            </h3>
+
+            <p className="mx-auto mt-4 max-w-2xl text-slate-400">
+              Testa en riktig demo av bokningssystemet, adminpanelen och
+              företagsflödet som är byggt för riktiga småföretag.
+            </p>
+
+            <a
+              href="https://cleanin-booking-api-ext3.vercel.app"
+              target="_blank"
+              className="mt-8 inline-flex rounded-full bg-blue-500 px-8 py-4 text-sm font-bold text-white shadow-[0_0_35px_rgba(37,99,235,0.7)] transition hover:bg-blue-400"
+            >
+              Öppna live demo
+            </a>
           </div>
         </div>
       </section>
