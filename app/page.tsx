@@ -1,359 +1,311 @@
+import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import Image from "next/image";
 
 export default function Home() {
-  const problems = [
-    {
-      title: "DM-kaos",
-      text: "Kunder skriver på Instagram, tider glöms bort och allt blir svårt att hålla koll på.",
-      icon: "💬",
-    },
-    {
-      title: "Oprofessionell känsla",
-      text: "Ett företag kan vara riktigt bra, men ändå tappa kunder om det ser rörigt ut online.",
-      icon: "👤",
-    },
-    {
-      title: "Ingen struktur",
-      text: "Bokningar, personal, betalningar och kundinformation ligger på olika ställen.",
-      icon: "📁",
-    },
-  ];
-
-  const features = [
-    ["▣", "Modern landningssida"],
-    ["📅", "Onlinebokning"],
-    ["☷", "Adminpanel"],
-    ["👥", "Personal-login"],
-    ["✓", "Betalstatus"],
-    ["💳", "Stripe-betalning"],
-    ["📍", "GPS check-in"],
-    ["⚙", "Automatiserade flöden"],
-  ];
-
   const projects = [
     {
-      images: [
-        "/IMG_4418.jpeg",
-        "/project-4.png",
-        "/IMG_4416.jpeg",
-        "/IMG_4417.jpeg",
-      ],
-      title: "Premium Landing Page",
-      text: "En premium startsida som får företaget att kännas modernt och professionellt direkt när kunden öppnar sidan. Perfekt för företag som vill sticka ut, bygga förtroende och få fler bokningar online.",
+      image: "/IMG_4418.jpeg",
+      title: "CleaninBooking",
+      text: "Bokningssystem för städföretag",
+      tags: ["Next.js", "TypeScript", "Tailwind CSS"],
     },
     {
-      images: [
-        "/IMG_4408.jpeg",
-        "/IMG_4410.png",
-        "/IMG_4411.jpeg",
-        "/IMG_4412.jpeg",
-      ],
-      title: "Admin Dashboard",
-      text: "Ett internt adminsystem där företaget kan hantera bokningar, kunder, betalningar och personal på ett och samma ställe. Ger bättre struktur och sparar tid varje dag.",
+      image: "/IMG_4408.jpeg",
+      title: "GymTracker",
+      text: "Träningsapp med statistik & planer",
+      tags: ["Next.js", "MongoDB", "Tailwind CSS"],
     },
     {
-      images: ["/project-3.png", "/IMG_4413.png", "/IMG_4414.png"],
-      title: "Smart Booking Flow",
-      text: "Ett smart bokningsflöde där kunder enkelt kan välja tjänst, datum och skicka bokning direkt från mobilen. Snabbt, tydligt och byggt för att öka konverteringar.",
+      image: "/project-3.png",
+      title: "AI Chat Platform",
+      text: "AI chattplattform med modern UI",
+      tags: ["Next.js", "OpenAI API", "Tailwind CSS"],
+    },
+  ];
+
+  const values = [
+    {
+      icon: "⚡",
+      title: "Snabba leveranser",
+      text: "Effektiva processer och snabb leverans.",
     },
     {
-      images: [
-        "/IMG_4419.jpeg",
-        "/IMG_4420.jpeg",
-        "/IMG_4421.jpeg",
-        "/IMG_4422.jpeg",
-      ],
-      title: "Employee System",
-      text: "Ett personalsystem där anställda kan logga in, se sina jobb och hantera uppdrag direkt från mobilen. Perfekt för företag som vill växa och organisera sitt team bättre.",
+      icon: "</>",
+      title: "Modern kod",
+      text: "Ren, skalbar och hållbar kod.",
+    },
+    {
+      icon: "📱",
+      title: "Mobilanpassat",
+      text: "Alla lösningar är 100% responsiva.",
+    },
+    {
+      icon: "🛡️",
+      title: "Säkra lösningar",
+      text: "Säkerhet och prestanda i fokus.",
     },
   ];
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#020714] text-white">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_70%_10%,rgba(37,99,235,0.45),transparent_35%),radial-gradient(circle_at_20%_30%,rgba(14,165,233,0.12),transparent_35%)]" />
-
-      {/* NAVBAR */}
-      <nav className="border-b border-white/10 bg-black/20">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <div className="text-2xl font-bold tracking-tight">
+    <main className="min-h-screen bg-[#020714] text-white">
+      <nav className="border-b border-white/10 bg-[#050914]">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-6">
+          <div className="text-2xl font-black">
             lever<span className="text-blue-400">.cloud</span>
           </div>
 
+          <div className="hidden gap-10 text-sm font-semibold text-white/80 md:flex">
+  <a href="#">Hem</a>
+
+  <a
+    href="/projects"
+    className="transition hover:text-blue-400"
+  >
+    Projekt
+  </a>
+
+  <a href="/about">Om mig</a>
+
+  <a href="#services">Tjänster</a>
+
+  <a href="#contact">Kontakt</a>
+</div>
           <a
             href="#contact"
-            className="rounded-full border border-white/20 px-5 py-2 text-sm font-medium text-white/90 transition hover:border-blue-400 hover:bg-blue-500/10"
+            className="rounded-2xl border border-blue-400 px-6 py-3 text-sm font-bold shadow-[0_0_20px_rgba(59,130,246,0.45)] hover:bg-blue-500/10"
           >
             Kontakta mig
           </a>
         </div>
       </nav>
 
-      {/* HERO */}
-      <section className="mx-auto max-w-7xl px-6 py-24 text-center">
-        <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm text-blue-300 shadow-[0_0_35px_rgba(59,130,246,0.25)]">
-          <span className="h-2 w-2 rounded-full bg-blue-400" />
-          Premium digitala system för småföretag
-        </div>
-
-        <h1 className="mx-auto max-w-5xl text-5xl font-black leading-[0.95] tracking-tight md:text-7xl">
-          Sluta ta bokningar via DM.
-          <span className="mt-3 block bg-gradient-to-r from-blue-400 via-sky-400 to-cyan-300 bg-clip-text text-transparent">
-            Bygg ett företag som känns professionellt.
-          </span>
-        </h1>
-
-        <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-slate-300">
-          lever.cloud bygger moderna bokningssystem, premium hemsidor och
-          digitala lösningar för småföretag som vill få bättre struktur, fler
-          bokningar och en starkare online-närvaro.
-        </p>
-
-        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a
-            href="#contact"
-            className="rounded-full bg-blue-500 px-7 py-4 text-sm font-bold text-white shadow-[0_0_35px_rgba(37,99,235,0.7)] transition hover:bg-blue-400"
-          >
-            Jag vill ha ett system →
-          </a>
-
-          <a
-            href="#projects"
-            className="rounded-full border border-white/15 bg-white/5 px-7 py-4 text-sm font-bold text-white transition hover:border-blue-400 hover:bg-blue-500/10"
-          >
-            Se projekt
-          </a>
-        </div>
-      </section>
-
-      {/* PROBLEM */}
-      <section className="border-y border-white/10 bg-black/20 px-6 py-20">
-        <div className="mx-auto max-w-7xl text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.4em] text-blue-400">
-            Problemet
-          </p>
-
-          <h2 className="mt-4 text-3xl font-bold md:text-4xl">
-            Känns detta igen?
-          </h2>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {problems.map((problem) => (
-              <div
-                key={problem.title}
-                className="rounded-3xl border border-white/10 bg-white/[0.04] p-8 text-left shadow-[0_0_40px_rgba(37,99,235,0.08)]"
-              >
-                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-500/10 text-2xl text-blue-400">
-                  {problem.icon}
-                </div>
-
-                <h3 className="text-xl font-bold">{problem.title}</h3>
-
-                <p className="mt-3 leading-7 text-slate-400">{problem.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SOLUTION */}
-      <section className="mx-auto max-w-7xl px-6 py-24 text-center">
-        <p className="text-xs font-bold uppercase tracking-[0.4em] text-blue-400">
-          Lösningen
-        </p>
-
-        <h2 className="mx-auto mt-4 max-w-3xl text-3xl font-bold md:text-5xl">
-          System byggda för riktiga företag.
-        </h2>
-
-        <div className="mt-14 grid gap-5 md:grid-cols-4">
-          {features.map(([icon, title]) => (
-            <div
-              key={title}
-              className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 text-left"
-            >
-              <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500/10 text-blue-400">
-                {icon}
-              </div>
-
-              <h3 className="font-bold">{title}</h3>
+      <section className="border-b border-white/10">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 px-8 py-20 md:grid-cols-2">
+          <div>
+            <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm text-blue-200">
+              <span className="h-2 w-2 rounded-full bg-blue-400" />
+              Premium digitala lösningar för smarta företag
             </div>
-          ))}
-        </div>
-      </section>
 
-      {/* PROJECTS */}
-      <section
-        id="projects"
-        className="border-y border-white/10 bg-black/20 px-6 py-24"
-      >
-        <div className="mx-auto max-w-7xl">
-          <div className="text-center">
-            <p className="text-xs font-bold uppercase tracking-[0.4em] text-blue-400">
-              Projekt
+            <h1 className="max-w-2xl text-6xl font-black leading-[0.95] tracking-tight md:text-7xl">
+              Bygg ett företag som känns{" "}
+              <span className="bg-gradient-to-r from-blue-500 to-cyan-300 bg-clip-text text-transparent">
+                professionellt.
+              </span>
+            </h1>
+
+            <p className="mt-6 max-w-xl text-lg leading-8 text-slate-300">
+              lever.cloud bygger moderna bokningssystem, premium hemsidor och
+              digitala lösningar som får ditt företag att växa. Rent, snabbt och
+              skräddarsytt för dig.
             </p>
 
-            <h2 className="mt-4 text-4xl font-black md:text-5xl">
-              Exempel på vad jag kan bygga.
-            </h2>
-
-            <p className="mx-auto mt-6 max-w-2xl text-slate-400">
-              Premium hemsidor, bokningssystem och adminpaneler byggda med
-              modern fullstack-teknik.
-            </p>
-          </div>
-
-          <div className="mt-14 grid gap-8 md:grid-cols-2">
-            {projects.map((project) => (
-              <div
-                key={project.title}
-                className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] transition hover:border-blue-400/40"
+            <div className="mt-8 flex gap-4">
+              <a
+                href="/projects"
+                className="rounded-xl bg-blue-600 px-7 py-4 text-sm font-bold shadow-[0_0_30px_rgba(37,99,235,0.55)] hover:bg-blue-500"
               >
-                <div className="bg-[#050b18] p-5">
-                  <div className="grid grid-cols-2 gap-4">
-                    {project.images.map((img, imgIndex) => (
-                      <div
-                        key={imgIndex}
-                        className={`relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 ${
-                          project.images.length === 3 && imgIndex === 2
-                            ? "col-span-2 h-52"
-                            : "h-52"
-                        }`}
-                      >
-                        <Image
-                          src={img}
-                          alt={`${project.title} screenshot ${imgIndex + 1}`}
-                          fill
-                          className="object-contain p-5"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                Se mina projekt →
+              </a>
 
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold">{project.title}</h3>
+              <a
+                href="#contact"
+                className="rounded-xl border border-blue-400/50 px-7 py-4 text-sm font-bold hover:bg-blue-500/10"
+              >
+                Kontakta mig
+              </a>
+            </div>
 
-                  <p className="mt-3 text-slate-400">{project.text}</p>
-                </div>
-              </div>
-            ))}
+            <div className="mt-8 flex gap-5">
+              <a
+                href="https://github.com/1LeandroLV"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-14 w-14 items-center justify-center rounded-full border border-blue-500/30 bg-white/5 text-2xl text-white shadow-[0_0_25px_rgba(37,99,235,0.35)] hover:bg-blue-500/20"
+              >
+                <FaGithub />
+              </a>
+
+              <a
+                href="https://se.linkedin.com/in/leandro-v-37a970380"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-14 w-14 items-center justify-center rounded-full border border-blue-500/30 bg-white/5 text-2xl text-white shadow-[0_0_25px_rgba(37,99,235,0.35)] hover:bg-blue-500/20"
+              >
+                <FaLinkedinIn />
+              </a>
+
+              <a
+                href="https://www.instagram.com/1leandro.v"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-14 w-14 items-center justify-center rounded-full border border-blue-500/30 bg-white/5 text-2xl text-white shadow-[0_0_25px_rgba(37,99,235,0.35)] hover:bg-blue-500/20"
+              >
+                <FaInstagram />
+              </a>
+
+              <a
+                href="mailto:dinmail@gmail.com"
+                className="flex h-14 w-14 items-center justify-center rounded-full border border-blue-500/30 bg-white/5 text-2xl text-white shadow-[0_0_25px_rgba(37,99,235,0.35)] hover:bg-blue-500/20"
+              >
+                <MdEmail />
+              </a>
+            </div>
           </div>
 
-          <div className="mt-20 text-center">
-            <p className="text-sm font-bold uppercase tracking-[0.3em] text-blue-400">
-              Live demo
-            </p>
+          <div className="relative flex h-[540px] items-end justify-center">
+            <div className="absolute bottom-10 h-[430px] w-[430px] rounded-[45%_55%_50%_50%] bg-gradient-to-br from-cyan-400 to-blue-700 shadow-[0_0_70px_rgba(14,165,233,0.55)]" />
 
-            <h3 className="mt-4 text-3xl font-bold text-white md:text-4xl">
-              Vill du se projektet live?
-            </h3>
-
-            <p className="mx-auto mt-4 max-w-2xl text-slate-400">
-              Testa en riktig demo av bokningssystemet, adminpanelen och
-              företagsflödet som är byggt för riktiga småföretag.
-            </p>
-
-            <a
-              href="https://cleanin-booking-api-ext3.vercel.app"
-              target="_blank"
-              className="mt-8 inline-flex rounded-full bg-blue-500 px-8 py-4 text-sm font-bold text-white shadow-[0_0_35px_rgba(37,99,235,0.7)] transition hover:bg-blue-400"
-            >
-              Öppna live demo
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* ABOUT */}
-      <section className="mx-auto max-w-5xl px-6 py-24">
-        <div className="grid items-center gap-12 md:grid-cols-2">
-          <div className="flex justify-center">
-            <div className="relative h-[350px] w-[280px] overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-blue-500/20 to-cyan-500/10 shadow-[0_0_60px_rgba(37,99,235,0.25)]">
+            <div className="relative z-10 h-[500px] w-[430px] overflow-hidden rounded-[2rem] shadow-[0_0_60px_rgba(37,99,235,0.35)]">
               <Image
                 src="/profile.png"
                 alt="Leandro"
                 fill
-                className="object-cover"
+                priority
+                className="object-cover object-center"
               />
             </div>
-          </div>
-
-          <div>
-            <p className="text-xs font-bold uppercase tracking-[0.4em] text-blue-400">
-              Om mig
-            </p>
-
-            <h2 className="mt-4 text-4xl font-black">Byggt av Leandro.</h2>
-
-            <p className="mt-6 leading-8 text-slate-400">
-              Backend Developer (Cloud) student med fokus på att bygga moderna
-              digitala lösningar för småföretag.
-            </p>
-
-            <p className="mt-6 leading-8 text-slate-400">
-              Jag bygger system som hjälper företag få bättre struktur,
-              professionell online-närvaro och enklare bokningsflöden.
-            </p>
           </div>
         </div>
       </section>
 
-      {/* CUSTOM SYSTEMS */}
-      <section className="mx-auto max-w-6xl px-6 py-24">
-        <div className="rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-blue-500/10 to-cyan-500/5 p-10 text-center shadow-[0_0_80px_rgba(37,99,235,0.12)] md:p-16">
-          <p className="text-xs font-bold uppercase tracking-[0.4em] text-blue-400">
-            Flexibilitet
-          </p>
+      <section id="projects" className="border-b border-white/10 px-8 py-16">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-10 flex items-end justify-between">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-widest text-blue-400">
+                Projekt
+              </p>
+              <h2 className="mt-4 text-4xl font-bold">Några utvalda projekt</h2>
+            </div>
 
-          <h2 className="mx-auto mt-5 max-w-4xl text-4xl font-black leading-tight md:text-6xl">
-            Behöver du något helt annat?
-          </h2>
+            <a
+              href="/projects"
+              className="rounded-xl border border-white/20 px-5 py-3 text-sm font-semibold hover:bg-white/10"
+            >
+              Se alla projekt
+            </a>
+          </div>
 
-          <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-slate-300">
-            lever.cloud bygger inte bara bokningssystem.
-            <br />
-            Jag kan även bygga premium hemsidor, dashboards, interna
-            företagssystem, kundportaler och skräddarsydda digitala lösningar
-            för ditt företag.
-          </p>
-
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
-            {[
-              "Premium hemsidor",
-              "Dashboards",
-              "Kundportaler",
-              "Adminsystem",
-              "Automation",
-              "Custom systems",
-            ].map((item) => (
+          <div className="grid gap-7 md:grid-cols-3">
+            {projects.map((project) => (
               <div
-                key={item}
-                className="rounded-full border border-white/10 bg-white/5 px-5 py-3 text-sm text-slate-200"
+                key={project.title}
+                className="rounded-2xl border border-white/10 bg-white/[0.03] p-4"
               >
-                {item}
+                <div className="relative h-44 overflow-hidden rounded-xl bg-[#050b18]">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+
+                <h3 className="mt-5 text-xl font-bold">{project.title}</h3>
+                <p className="mt-2 text-sm text-slate-400">{project.text}</p>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full bg-white/5 px-3 py-2 text-xs text-slate-300"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section id="contact" className="px-6 py-24 text-center">
-        <h2 className="text-4xl font-black md:text-5xl">
-          Vill du bygga något liknande?
-        </h2>
+      <section id="about" className="px-8 py-20">
+        <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-widest text-blue-400">
+              Om mig
+            </p>
 
-        <p className="mx-auto mt-5 max-w-xl text-slate-400">
-          Kontakta lever.cloud så bygger vi en modern lösning för ditt företag.
-        </p>
+            <h2 className="mt-4 max-w-lg text-4xl font-bold leading-tight">
+              Jag bygger lösningar som gör skillnad.
+            </h2>
 
-        <a
-          href="mailto:contact@lever.cloud"
-          className="mt-9 inline-flex rounded-full bg-blue-500 px-8 py-4 text-sm font-bold text-white shadow-[0_0_35px_rgba(37,99,235,0.7)]"
-        >
-          Kontakta lever.cloud
-        </a>
+            <p className="mt-6 max-w-xl leading-8 text-slate-400">
+              Mitt fokus är att skapa moderna, snabba och användarvänliga
+              lösningar som hjälper företag att växa online.
+            </p>
+
+            <a
+              href="#contact"
+              className="mt-8 inline-flex rounded-xl border border-white/15 px-6 py-3 text-sm font-semibold hover:bg-white/10"
+            >
+              Läs mer om mig →
+            </a>
+          </div>
+
+          <div id="services" className="grid gap-8 sm:grid-cols-2">
+            {values.map((value) => (
+              <div key={value.title} className="flex gap-4">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-blue-500/10 text-blue-400">
+                  {value.icon}
+                </div>
+
+                <div>
+                  <h3 className="font-bold">{value.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-400">
+                    {value.text}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
+
+      <footer id="contact" className="border-t border-white/10 px-8 py-8">
+        <div className="mx-auto flex max-w-7xl justify-between text-sm text-slate-500">
+          <p>© 2025 lever.cloud. Alla rättigheter förbehållna.</p>
+
+          <div className="flex gap-4">
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-sm text-white hover:bg-blue-500/20"
+            >
+              <FaGithub />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-sm text-white hover:bg-blue-500/20"
+            >
+              <FaLinkedinIn />
+            </a>
+
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-sm text-white hover:bg-blue-500/20"
+            >
+              <FaInstagram />
+            </a>
+
+            <a
+              href="mailto:dinmail@gmail.com"
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-sm text-white hover:bg-blue-500/20"
+            >
+              <MdEmail />
+            </a>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
