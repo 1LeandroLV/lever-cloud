@@ -67,7 +67,7 @@ export default function Home() {
 
   <a href="/about">Om mig</a>
 
-  <a href="#services">Tjänster</a>
+  <a href="/services">Tjänster</a>
 
   <a href="#contact">Kontakt</a>
 </div>
