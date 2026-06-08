@@ -54,8 +54,12 @@ export default function AboutPage() {
               Om mig
               <span className="absolute -bottom-3 left-1/2 h-1 w-8 -translate-x-1/2 rounded-full bg-blue-500 shadow-[0_0_18px_rgba(59,130,246,1)]" />
             </Link>
-            <a className="hover:text-white" href="#services">Tjänster</a>
-            <a className="hover:text-white" href="#contact">Kontakt</a>
+            <Link className="hover:text-white" href="/services">
+  Tjänster
+</Link>
+            <Link className="hover:text-white" href="/#contact">
+  Kontakt
+</Link>
           </div>
 
           <a
