@@ -69,14 +69,14 @@ export default function Home() {
 
   <a href="/services">Tjänster</a>
 
-  <a href="#contact">Kontakt</a>
+  <a href="/contact">Kontakt</a>
 </div>
-          <a
-            href="#contact"
-            className="rounded-2xl border border-blue-400 px-6 py-3 text-sm font-bold shadow-[0_0_20px_rgba(59,130,246,0.45)] hover:bg-blue-500/10"
-          >
-            Kontakta mig
-          </a>
+         <a
+  href="/contact"
+  className="rounded-2xl border border-blue-400 px-6 py-3 text-sm font-bold shadow-[0_0_20px_rgba(59,130,246,0.45)] hover:bg-blue-500/10"
+>
+  Kontakta mig
+</a>
         </div>
       </nav>
 
@@ -110,7 +110,7 @@ export default function Home() {
               </a>
 
               <a
-                href="#contact"
+                href="/contact"
                 className="rounded-xl border border-blue-400/50 px-7 py-4 text-sm font-bold hover:bg-blue-500/10"
               >
                 Kontakta mig
