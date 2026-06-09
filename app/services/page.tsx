@@ -39,11 +39,11 @@ export default function ServicesPage() {
             <Link href="/projects">Projekt</Link>
             <Link href="/about">Om mig</Link>
             <Link href="/services" className="text-blue-400">Tjänster</Link>
-            <a href="#contact">Kontakt</a>
+            <Link href="/contact">Kontakt</Link>
           </div>
 
           <a
-            href="#contact"
+            href="/contact"
             className="hidden rounded-full border border-blue-500/50 px-5 py-2.5 text-sm font-bold shadow-[0_0_25px_rgba(37,99,235,0.45)] md:block"
           >
             Kontakta mig →
