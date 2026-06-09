@@ -1,12 +1,59 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 
 export default function ContactPage() {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    company: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState("");
+
   const socials = [
     ["📧", "Email", "contact@lever.cloud"],
     ["📱", "Instagram", "@lever.cloud"],
     ["💼", "Business", "Premium digital solutions"],
     ["⚡", "Svarstid", "Oftast inom några timmar"],
   ];
+
+  function handleChange(
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value,
+    });
+  }
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    setStatus("Skickar...");
+
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    });
+
+    if (response.ok) {
+      setStatus("Meddelandet är skickat ✅");
+      setForm({
+        name: "",
+        email: "",
+        company: "",
+        message: "",
+      });
+    } else {
+      setStatus("Något gick fel. Försök igen.");
+    }
+  }
 
   return (
     <main className="min-h-screen overflow-hidden bg-[#02050d] text-white">
@@ -80,9 +127,7 @@ export default function ContactPage() {
                 className="rounded-2xl border border-white/10 bg-white/[0.04] p-6"
               >
                 <div className="text-3xl">{icon}</div>
-
                 <h3 className="mt-4 text-xl font-black">{title}</h3>
-
                 <p className="mt-2 text-slate-400">{text}</p>
               </div>
             ))}
@@ -93,7 +138,10 @@ export default function ContactPage() {
           <div className="absolute inset-0 rounded-full bg-blue-500/20 blur-[120px]" />
 
           <div className="relative rounded-[2rem] border border-white/10 bg-white/[0.04] p-8 shadow-[0_0_90px_rgba(37,99,235,0.22)]">
-            <div className="rounded-[1.5rem] border border-white/10 bg-[#07101f] p-8">
+            <form
+              onSubmit={handleSubmit}
+              className="rounded-[1.5rem] border border-white/10 bg-[#07101f] p-8"
+            >
               <p className="text-sm font-black uppercase tracking-[0.3em] text-blue-400">
                 Starta projekt
               </p>
@@ -104,34 +152,58 @@ export default function ContactPage() {
 
               <div className="mt-8 space-y-5">
                 <input
+                  name="name"
+                  value={form.name}
+                  onChange={handleChange}
                   type="text"
                   placeholder="Ditt namn"
+                  required
                   className="w-full rounded-2xl border border-white/10 bg-white/[0.05] px-5 py-4 outline-none placeholder:text-slate-500 focus:border-blue-500"
                 />
 
                 <input
+                  name="email"
+                  value={form.email}
+                  onChange={handleChange}
                   type="email"
                   placeholder="Email"
+                  required
                   className="w-full rounded-2xl border border-white/10 bg-white/[0.05] px-5 py-4 outline-none placeholder:text-slate-500 focus:border-blue-500"
                 />
 
                 <input
+                  name="company"
+                  value={form.company}
+                  onChange={handleChange}
                   type="text"
                   placeholder="Företag"
                   className="w-full rounded-2xl border border-white/10 bg-white/[0.05] px-5 py-4 outline-none placeholder:text-slate-500 focus:border-blue-500"
                 />
 
                 <textarea
+                  name="message"
+                  value={form.message}
+                  onChange={handleChange}
                   placeholder="Berätta vad du vill bygga..."
                   rows={5}
+                  required
                   className="w-full rounded-2xl border border-white/10 bg-white/[0.05] px-5 py-4 outline-none placeholder:text-slate-500 focus:border-blue-500"
                 />
 
-                <button className="w-full rounded-2xl bg-blue-600 px-8 py-5 text-sm font-black shadow-[0_0_40px_rgba(37,99,235,0.65)] transition hover:bg-blue-500">
+                <button
+                  type="submit"
+                  className="w-full rounded-2xl bg-blue-600 px-8 py-5 text-sm font-black shadow-[0_0_40px_rgba(37,99,235,0.65)] transition hover:bg-blue-500"
+                >
                   Skicka förfrågan →
                 </button>
+
+                {status && (
+                  <p className="text-center text-sm font-bold text-blue-400">
+                    {status}
+                  </p>
+                )}
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </section>
