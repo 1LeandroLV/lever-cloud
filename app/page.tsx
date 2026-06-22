@@ -4,25 +4,14 @@ import Image from "next/image";
 
 export default function Home() {
   const projects = [
-    {
-      image: "/IMG_4418.jpeg",
-      title: "CleaninBooking",
-      text: "Bokningssystem för städföretag",
-      tags: ["Next.js", "TypeScript", "Tailwind CSS"],
-    },
-    {
-      image: "/IMG_4408.jpeg",
-      title: "GymTracker",
-      text: "Träningsapp med statistik & planer",
-      tags: ["Next.js", "MongoDB", "Tailwind CSS"],
-    },
-    {
-      image: "/project-3.png",
-      title: "AI Chat Platform",
-      text: "AI chattplattform med modern UI",
-      tags: ["Next.js", "OpenAI API", "Tailwind CSS"],
-    },
-  ];
+  {
+    image: "/IMG_4418.jpeg",
+    title: "CleanBook – K Golv & Städservice",
+    text: "Komplett bokningssystem för städföretag med kundbokning, adminpanel och betalningsflöde.",
+    tags: ["Next.js", "TypeScript", "Stripe"],
+  },
+ 
+];
 
   const values = [
     {
@@ -146,7 +135,7 @@ export default function Home() {
               </a>
 
               <a
-                href="mailto:dinmail@gmail.com"
+                href="mailto:leandro.lever.cloud@gmail.com"
                 className="flex h-14 w-14 items-center justify-center rounded-full border border-blue-500/30 bg-white/5 text-2xl text-white shadow-[0_0_25px_rgba(37,99,235,0.35)] hover:bg-blue-500/20"
               >
                 <MdEmail />
@@ -169,6 +158,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <footer id="contact" className="border-t border-white/10 px-8 py-8">
 
       <section id="projects" className="border-b border-white/10 px-8 py-16">
         <div className="mx-auto max-w-7xl">
@@ -188,23 +178,24 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="grid gap-7 md:grid-cols-3">
+          <div className="grid gap-7 md:grid-cols-1">
             {projects.map((project) => (
               <div
                 key={project.title}
-                className="rounded-2xl border border-white/10 bg-white/[0.03] p-4"
+                className="max-w-2xl rounded-2xl border border-white/10 bg-white/[0.03] p-8"
               >
-                <div className="relative h-44 overflow-hidden rounded-xl bg-[#050b18]">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+               
 
                 <h3 className="mt-5 text-xl font-bold">{project.title}</h3>
                 <p className="mt-2 text-sm text-slate-400">{project.text}</p>
+                <a
+  href="https://cleanin-booking-api-ext3.vercel.app"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-4 inline-block rounded-xl bg-blue-500 px-4 py-2 text-white font-semibold"
+>
+  Besök hemsidan →
+</a>
 
                 <div className="mt-5 flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
@@ -222,50 +213,58 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="px-8 py-20">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2">
-          <div>
-            <p className="text-sm font-bold uppercase tracking-widest text-blue-400">
-              Om mig
-            </p>
+        <section id="about" className="px-8 py-20">
+  <div className="mx-auto grid max-w-7xl items-center gap-12 md:grid-cols-2">
+    <div>
+      <p className="text-sm font-bold uppercase tracking-widest text-blue-400">
+        Redo?
+      </p>
 
-            <h2 className="mt-4 max-w-lg text-4xl font-bold leading-tight">
-              Jag bygger lösningar som gör skillnad.
-            </h2>
+      <h2 className="mt-4 max-w-lg text-4xl font-bold leading-tight">
+        Redo att digitalisera ditt företag?
+      </h2>
 
-            <p className="mt-6 max-w-xl leading-8 text-slate-400">
-              Mitt fokus är att skapa moderna, snabba och användarvänliga
-              lösningar som hjälper företag att växa online.
-            </p>
+      <p className="mt-6 max-w-xl leading-8 text-slate-400">
+        Jag bygger moderna hemsidor, bokningssystem och adminpaneler för företag
+        som vill växa snabbare och se mer professionella ut.
+      </p>
 
-            <a
-              href="#contact"
-              className="mt-8 inline-flex rounded-xl border border-white/15 px-6 py-3 text-sm font-semibold hover:bg-white/10"
-            >
-              Läs mer om mig →
-            </a>
-          </div>
+      <div className="mt-8 flex flex-wrap gap-4">
+        <a
+          href="/contact"
+          className="rounded-xl bg-blue-500 px-6 py-3 text-sm font-semibold text-white hover:bg-blue-400"
+        >
+          Kontakta mig →
+        </a>
 
-          <div id="services" className="grid gap-8 sm:grid-cols-2">
-            {values.map((value) => (
-              <div key={value.title} className="flex gap-4">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-blue-500/10 text-blue-400">
-                  {value.icon}
-                </div>
+        <a
+          href="/services"
+          className="rounded-xl border border-white/15 px-6 py-3 text-sm font-semibold hover:bg-white/10"
+        >
+          Se tjänster
+        </a>
+      </div>
+    </div>
 
-                <div>
-                  <h3 className="font-bold">{value.title}</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-400">
-                    {value.text}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+    <div className="rounded-2xl border border-blue-500/20 bg-blue-500/5 p-8">
+      <p className="text-sm uppercase tracking-widest text-blue-400">
+        VARFÖR LEVER.CLOUD
+      </p>
 
-      <footer id="contact" className="border-t border-white/10 px-8 py-8">
+      <h3 className="mt-4 text-2xl font-bold">
+        En kontaktperson. Ett komplett system.
+      </h3>
+
+      <p className="mt-4 leading-7 text-slate-400">
+        Från första designen till färdig lansering bygger jag hela lösningen åt
+        dig. Hemsida, bokningssystem, betalningar och administration på ett
+        ställe.
+      </p>
+    </div>
+  </div>
+</section>
+
+          
         <div className="mx-auto flex max-w-7xl justify-between text-sm text-slate-500">
           <p>© 2025 lever.cloud. Alla rättigheter förbehållna.</p>
 
