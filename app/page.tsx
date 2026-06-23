@@ -37,7 +37,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#020714] text-white">
+    <main className="min-h-screen overflow-x-hidden bg-[#020714] text-white">
       <nav className="border-b border-white/10 bg-[#050914]">
   <div className="mx-auto max-w-7xl px-8 py-6">
     <div className="flex items-center justify-between">
