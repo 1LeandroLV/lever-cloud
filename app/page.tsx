@@ -60,7 +60,7 @@ export default function Home() {
         Kontakta mig
       </a>
 
-      <button
+           <button
         className="rounded-xl border border-white/15 px-4 py-2 text-xl text-white md:hidden"
         aria-label="Öppna meny"
       >
@@ -71,41 +71,31 @@ export default function Home() {
     <div className="mt-6 grid gap-3 rounded-2xl border border-blue-500/20 bg-blue-500/5 p-5 text-sm font-semibold text-white/80 md:hidden">
   <a href="/" className="rounded-xl bg-white/5 p-4 hover:bg-blue-500/10">
     Hem
-    <span className="block text-xs font-normal text-slate-400">
-      Till startsidan
-    </span>
+    <span className="block text-xs font-normal text-slate-400">Till startsidan</span>
   </a>
 
   <a href="/projects" className="rounded-xl bg-white/5 p-4 hover:bg-blue-500/10">
     Projekt
-    <span className="block text-xs font-normal text-slate-400">
-      Se mina tidigare arbeten
-    </span>
+    <span className="block text-xs font-normal text-slate-400">Se mina kundcase</span>
   </a>
 
   <a href="/about" className="rounded-xl bg-white/5 p-4 hover:bg-blue-500/10">
     Om mig
-    <span className="block text-xs font-normal text-slate-400">
-      Läs mer om Leandro
-    </span>
+    <span className="block text-xs font-normal text-slate-400">Läs mer om Leandro</span>
   </a>
 
   <a href="/services" className="rounded-xl bg-white/5 p-4 hover:bg-blue-500/10">
     Tjänster
-    <span className="block text-xs font-normal text-slate-400">
-      Se vad jag kan bygga
-    </span>
+    <span className="block text-xs font-normal text-slate-400">Se vad jag kan bygga</span>
   </a>
 
   <a href="/contact" className="rounded-xl bg-blue-500 p-4 text-white hover:bg-blue-400">
     Kontakt
-    <span className="block text-xs font-normal text-blue-100">
-      Starta ditt projekt
-    </span>
+    <span className="block text-xs font-normal text-blue-100">Starta ditt projekt</span>
   </a>
 </div>
+  </div>
 </nav>
-
       <section className="border-b border-white/10">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-8 py-20 md:grid-cols-2">
           <div>
@@ -195,7 +185,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <footer id="contact" className="border-t border-white/10 px-8 py-8">
+      
 
       <section id="projects" className="border-b border-white/10 px-8 py-16">
         <div className="mx-auto max-w-7xl">
@@ -301,7 +291,7 @@ export default function Home() {
   </div>
 </section>
 
-          
+        <footer id="contact" className="border-t border-white/10 px-8 py-8">  
         <div className="mx-auto flex max-w-7xl justify-between text-sm text-slate-500">
           <p>© 2025 lever.cloud. Alla rättigheter förbehållna.</p>
 
