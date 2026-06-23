@@ -44,7 +44,7 @@ export default function Home() {
             lever<span className="text-blue-400">.cloud</span>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-4 text-sm font-semibold text-white/80">
+          <div className="hidden md:flex gap-6 text-sm font-semibold text-white/80">
   <a href="#">Hem</a>
 
   <a
