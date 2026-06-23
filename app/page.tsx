@@ -39,35 +39,44 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#020714] text-white">
       <nav className="border-b border-white/10 bg-[#050914]">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-6">
-          <div className="text-2xl font-black">
-            lever<span className="text-blue-400">.cloud</span>
-          </div>
+  <div className="mx-auto max-w-7xl px-8 py-6">
+    <div className="flex items-center justify-between">
+      <div className="text-2xl font-black">
+        lever<span className="text-blue-400">.cloud</span>
+      </div>
 
-          <div className="hidden md:flex gap-6 text-sm font-semibold text-white/80">
-  <a href="#">Hem</a>
+      <div className="hidden gap-6 text-sm font-semibold text-white/80 md:flex">
+        <a href="/">Hem</a>
+        <a href="/projects" className="transition hover:text-blue-400">Projekt</a>
+        <a href="/about">Om mig</a>
+        <a href="/services">Tjänster</a>
+        <a href="/contact">Kontakt</a>
+      </div>
 
-  <a
-    href="/projects"
-    className="transition hover:text-blue-400"
-  >
-    Projekt
-  </a>
+      <a
+        href="/contact"
+        className="hidden rounded-2xl border border-blue-400 px-6 py-3 text-sm font-bold shadow-[0_0_20px_rgba(59,130,246,0.45)] hover:bg-blue-500/10 sm:block"
+      >
+        Kontakta mig
+      </a>
 
-  <a href="/about">Om mig</a>
+      <button
+        className="rounded-xl border border-white/15 px-4 py-2 text-xl text-white md:hidden"
+        aria-label="Öppna meny"
+      >
+        ☰
+      </button>
+    </div>
 
-  <a href="/services">Tjänster</a>
-
-  <a href="/contact">Kontakt</a>
-</div>
-         <a
-  href="/contact"
-  className="rounded-2xl border border-blue-400 px-6 py-3 text-sm font-bold shadow-[0_0_20px_rgba(59,130,246,0.45)] hover:bg-blue-500/10"
->
-  Kontakta mig
-</a>
-        </div>
-      </nav>
+    <div className="mt-6 grid gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-sm font-semibold text-white/80 md:hidden">
+      <a href="/">Hem</a>
+      <a href="/projects">Projekt</a>
+      <a href="/about">Om mig</a>
+      <a href="/services">Tjänster</a>
+      <a href="/contact">Kontakt</a>
+    </div>
+  </div>
+</nav>
 
       <section className="border-b border-white/10">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-8 py-20 md:grid-cols-2">
