@@ -86,7 +86,7 @@ export default function Home() {
               Premium digitala lösningar för smarta företag
             </div>
 
-            <h1 className="max-w-2xl text-6xl font-black leading-[0.95] tracking-tight md:text-7xl">
+           <h1 className="max-w-2xl text-5xl font-black leading-[1.05] tracking-tight sm:text-6xl md:text-7xl"> 
               Bygg ett företag som känns{" "}
               <span className="bg-gradient-to-r from-blue-500 to-cyan-300 bg-clip-text text-transparent">
                 professionellt.
