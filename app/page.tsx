@@ -68,14 +68,42 @@ export default function Home() {
       </button>
     </div>
 
-    <div className="mt-6 grid gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-5 text-sm font-semibold text-white/80 md:hidden">
-      <a href="/">Hem</a>
-      <a href="/projects">Projekt</a>
-      <a href="/about">Om mig</a>
-      <a href="/services">Tjänster</a>
-      <a href="/contact">Kontakt</a>
-    </div>
-  </div>
+    <div className="mt-6 grid gap-3 rounded-2xl border border-blue-500/20 bg-blue-500/5 p-5 text-sm font-semibold text-white/80 md:hidden">
+  <a href="/" className="rounded-xl bg-white/5 p-4 hover:bg-blue-500/10">
+    Hem
+    <span className="block text-xs font-normal text-slate-400">
+      Till startsidan
+    </span>
+  </a>
+
+  <a href="/projects" className="rounded-xl bg-white/5 p-4 hover:bg-blue-500/10">
+    Projekt
+    <span className="block text-xs font-normal text-slate-400">
+      Se mina tidigare arbeten
+    </span>
+  </a>
+
+  <a href="/about" className="rounded-xl bg-white/5 p-4 hover:bg-blue-500/10">
+    Om mig
+    <span className="block text-xs font-normal text-slate-400">
+      Läs mer om Leandro
+    </span>
+  </a>
+
+  <a href="/services" className="rounded-xl bg-white/5 p-4 hover:bg-blue-500/10">
+    Tjänster
+    <span className="block text-xs font-normal text-slate-400">
+      Se vad jag kan bygga
+    </span>
+  </a>
+
+  <a href="/contact" className="rounded-xl bg-blue-500 p-4 text-white hover:bg-blue-400">
+    Kontakt
+    <span className="block text-xs font-normal text-blue-100">
+      Starta ditt projekt
+    </span>
+  </a>
+</div>
 </nav>
 
       <section className="border-b border-white/10">
@@ -86,7 +114,7 @@ export default function Home() {
               Premium digitala lösningar för smarta företag
             </div>
 
-           <h1 className="max-w-2xl text-5xl font-black leading-[1.05] tracking-tight sm:text-6xl md:text-7xl"> 
+           <h1 className="max-w-2xl text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl md:text-7xl">
               Bygg ett företag som känns{" "}
               <span className="bg-gradient-to-r from-blue-500 to-cyan-300 bg-clip-text text-transparent">
                 professionellt.
