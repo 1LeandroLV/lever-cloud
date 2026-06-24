@@ -74,11 +74,11 @@ const [menuOpen, setMenuOpen] = useState(false);
     </div>
 {menuOpen && (
   <div className="mt-6 grid gap-3 rounded-2xl border border-blue-500/20 bg-blue-500/5 p-5 text-sm font-semibold text-white/80 md:hidden">
-    <a href="/" className="rounded-xl bg-white/5 p-4">Hem</a>
-    <a href="/projects" className="rounded-xl bg-white/5 p-4">Projekt</a>
-    <a href="/about" className="rounded-xl bg-white/5 p-4">Om mig</a>
-    <a href="/services" className="rounded-xl bg-white/5 p-4">Tjänster</a>
-    <a href="/contact" className="rounded-xl bg-blue-500 p-4 text-white">Kontakt</a>
+   <a href="/" className="rounded-xl bg-white/5 p-4">🏠 Hem</a>
+<a href="/projects" className="rounded-xl bg-white/5 p-4">📁 Projekt</a>
+<a href="/about" className="rounded-xl bg-white/5 p-4">👤 Om mig</a>
+<a href="/services" className="rounded-xl bg-white/5 p-4">🚀 Tjänster</a>
+<a href="/contact" className="rounded-xl bg-blue-500 p-4 text-white">✉️ Kontakt</a>
   </div>
 )}
    </div> 
@@ -98,13 +98,13 @@ const [menuOpen, setMenuOpen] = useState(false);
               </span>
             </h1>
 
-            <p className="mt-6 max-w-xl text-lg leading-8 text-slate-300">
+            <p className="mt-6 max-w-full break-words text-base leading-7 text-slate-300 sm:max-w-xl sm:text-lg sm:leading-8">
               lever.cloud bygger moderna bokningssystem, premium hemsidor och
               digitala lösningar som får ditt företag att växa. Rent, snabbt och
               skräddarsytt för dig.
             </p>
 
-            <div className="mt-8 flex gap-4">
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <a
                 href="/projects"
                 className="rounded-xl bg-blue-600 px-7 py-4 text-sm font-bold shadow-[0_0_30px_rgba(37,99,235,0.55)] hover:bg-blue-500"
