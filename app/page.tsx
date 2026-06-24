@@ -1,8 +1,12 @@
+"use client";
+
+import { useState } from "react";
 import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Image from "next/image";
-
 export default function Home() {
+const [menuOpen, setMenuOpen] = useState(false);
+
   const projects = [
   {
     image: "/IMG_4418.jpeg",
@@ -60,41 +64,24 @@ export default function Home() {
         Kontakta mig
       </a>
 
-           <button
-        className="rounded-xl border border-white/15 px-4 py-2 text-xl text-white md:hidden"
-        aria-label="Öppna meny"
-      >
-        ☰
-      </button>
+         <button
+  onClick={() => setMenuOpen(!menuOpen)}
+  className="rounded-xl border border-white/15 px-4 py-2 text-xl text-white md:hidden"
+  aria-label="Öppna meny"
+>
+  {menuOpen ? "×" : "☰"}
+</button>  
     </div>
-
-    <div className="mt-6 grid gap-3 rounded-2xl border border-blue-500/20 bg-blue-500/5 p-5 text-sm font-semibold text-white/80 md:hidden">
-  <a href="/" className="rounded-xl bg-white/5 p-4 hover:bg-blue-500/10">
-    Hem
-    <span className="block text-xs font-normal text-slate-400">Till startsidan</span>
-  </a>
-
-  <a href="/projects" className="rounded-xl bg-white/5 p-4 hover:bg-blue-500/10">
-    Projekt
-    <span className="block text-xs font-normal text-slate-400">Se mina kundcase</span>
-  </a>
-
-  <a href="/about" className="rounded-xl bg-white/5 p-4 hover:bg-blue-500/10">
-    Om mig
-    <span className="block text-xs font-normal text-slate-400">Läs mer om Leandro</span>
-  </a>
-
-  <a href="/services" className="rounded-xl bg-white/5 p-4 hover:bg-blue-500/10">
-    Tjänster
-    <span className="block text-xs font-normal text-slate-400">Se vad jag kan bygga</span>
-  </a>
-
-  <a href="/contact" className="rounded-xl bg-blue-500 p-4 text-white hover:bg-blue-400">
-    Kontakt
-    <span className="block text-xs font-normal text-blue-100">Starta ditt projekt</span>
-  </a>
-</div>
+{menuOpen && (
+  <div className="mt-6 grid gap-3 rounded-2xl border border-blue-500/20 bg-blue-500/5 p-5 text-sm font-semibold text-white/80 md:hidden">
+    <a href="/" className="rounded-xl bg-white/5 p-4">Hem</a>
+    <a href="/projects" className="rounded-xl bg-white/5 p-4">Projekt</a>
+    <a href="/about" className="rounded-xl bg-white/5 p-4">Om mig</a>
+    <a href="/services" className="rounded-xl bg-white/5 p-4">Tjänster</a>
+    <a href="/contact" className="rounded-xl bg-blue-500 p-4 text-white">Kontakt</a>
   </div>
+)}
+   </div> 
 </nav>
       <section className="border-b border-white/10">
         <div className="mx-auto grid max-w-7xl items-center gap-10 px-8 py-20 md:grid-cols-2">
