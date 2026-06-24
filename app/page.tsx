@@ -158,9 +158,9 @@ const [menuOpen, setMenuOpen] = useState(false);
           </div>
 
           <div className="relative flex h-[320px] items-center justify-center md:h-[540px]">
-             <div className="absolute bottom-4 h-[260px] w-[260px] rounded-full bg-gradient-to-br from-cyan-400 to-blue-700 opacity-80 blur-sm md:bottom-10 md:h-[430px] md:w-[430px]" />
+             
 
-             <div className="relative z-10 h-[280px] w-[230px] overflow-hidden rounded-[2rem] shadow-[0_0_40px_rgba(37,99,235,0.25)] md:h-[500px] md:w-[430px] md:shadow-[0_0_60px_rgba(37,99,235,0.35)]">
+             <div className="relative z-10 h-[400px] w-[320px] overflow-hidden rounded-[2rem] shadow-[0_0_40px_rgba(37,99,235,0.25)] md:h-[500px] md:w-[430px] md:shadow-[0_0_60px_rgba(37,99,235,0.35)]">
               <Image
                 src="/profile.png"
                 alt="Leandro"
