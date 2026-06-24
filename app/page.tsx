@@ -157,7 +157,7 @@ const [menuOpen, setMenuOpen] = useState(false);
             </div>
           </div>
 
-          <div className="relative flex h-[320px] items-center justify-center md:h-[540px]">
+          <div className="relative flex h-[480px] items-center justify-center md:h-[540px]">
              
 
              <div className="relative z-10 h-[400px] w-[320px] overflow-hidden rounded-[2rem] shadow-[0_0_40px_rgba(37,99,235,0.25)] md:h-[500px] md:w-[430px] md:shadow-[0_0_60px_rgba(37,99,235,0.35)]">
