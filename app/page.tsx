@@ -280,11 +280,11 @@ const [menuOpen, setMenuOpen] = useState(false);
 
         <footer id="contact" className="border-t border-white/10 px-8 py-8">  
         <div className="mx-auto flex max-w-7xl justify-between text-sm text-slate-500">
-          <p>© 2025 lever.cloud. Alla rättigheter förbehållna.</p>
+          <p>© 2026 lever.cloud. Alla rättigheter förbehållna.</p>
 
           <div className="flex gap-4">
             <a
-              href="https://github.com/"
+              href="https://github.com/1LeandroLV"
               target="_blank"
               rel="noopener noreferrer"
               className="flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-sm text-white hover:bg-blue-500/20"
@@ -293,7 +293,7 @@ const [menuOpen, setMenuOpen] = useState(false);
             </a>
 
             <a
-              href="https://www.linkedin.com/"
+              href="https://se.linkedin.com/in/leandro-v-37a970380"
               target="_blank"
               rel="noopener noreferrer"
               className="flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-sm text-white hover:bg-blue-500/20"
@@ -302,7 +302,7 @@ const [menuOpen, setMenuOpen] = useState(false);
             </a>
 
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/1leandro.v"
               target="_blank"
               rel="noopener noreferrer"
               className="flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-sm text-white hover:bg-blue-500/20"
@@ -311,7 +311,7 @@ const [menuOpen, setMenuOpen] = useState(false);
             </a>
 
             <a
-              href="mailto:dinmail@gmail.com"
+              href="mailto:leandro.lever.cloud@gmail.com"
               className="flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-sm text-white hover:bg-blue-500/20"
             >
               <MdEmail />
