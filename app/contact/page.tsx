@@ -14,7 +14,7 @@ export default function ContactPage() {
   const [status, setStatus] = useState("");
 
   const socials = [
-    ["📧", "Email", "contact@lever.cloud"],
+    ["📧", "Email", "leandro.lever.cloud@gmail.com"],
     ["📱", "Instagram", "@lever.cloud"],
     ["💼", "Business", "Premium digital solutions"],
     ["⚡", "Svarstid", "Oftast inom några timmar"],
@@ -77,7 +77,7 @@ export default function ContactPage() {
           </div>
 
           <a
-            href="mailto:contact@lever.cloud"
+            href="mailto:leandro.lever.cloud@gmail.com"
             className="hidden rounded-full border border-blue-500/40 bg-white/[0.03] px-5 py-2.5 text-sm font-bold shadow-[0_0_25px_rgba(37,99,235,0.35)] md:block"
           >
             Kontakta mig →
@@ -106,7 +106,7 @@ export default function ContactPage() {
 
           <div className="mt-10 flex flex-wrap gap-4">
             <a
-              href="mailto:contact@lever.cloud"
+              href="mailto:leandro.lever.cloud@gmail.com"
               className="rounded-2xl bg-blue-600 px-8 py-4 text-sm font-black shadow-[0_0_40px_rgba(37,99,235,0.65)] hover:bg-blue-500"
             >
               Skicka email →

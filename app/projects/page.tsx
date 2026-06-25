@@ -50,15 +50,15 @@ export default function ProjectsPage() {
             </Link>
             <Link href="/about">Om mig</Link>
             <Link href="/services">Tjänster</Link>
-            <a href="#contact">Kontakt</a>
+            <Link href="/contact">Kontakt</Link>
           </div>
 
-          <a
-            href="#contact"
-            className="hidden rounded-full border border-blue-500/50 px-5 py-2.5 text-sm font-bold shadow-[0_0_25px_rgba(37,99,235,0.45)] md:block"
-          >
-            Kontakta mig →
-          </a>
+        <Link
+  href="/contact"
+  className="hidden rounded-full border border-blue-500/50 px-5 py-2.5 text-sm font-bold shadow-[0_0_25px_rgba(37,99,235,0.45)] md:block"
+>
+  Kontakta mig →
+</Link>
         </div>
       </nav>
 

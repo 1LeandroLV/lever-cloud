@@ -298,7 +298,7 @@ export default function AboutPage() {
           </div>
 
           <a
-            href="mailto:contact@lever.cloud"
+            href="mailto:leandro.lever.cloud@gmail.com"
             className="rounded-2xl bg-blue-600 px-10 py-4 text-sm font-black shadow-[0_0_35px_rgba(37,99,235,0.55)] transition hover:bg-blue-500"
           >
             Kontakta mig idag →
