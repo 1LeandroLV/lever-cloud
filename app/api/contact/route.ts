@@ -29,7 +29,11 @@ export async function POST(req: Request) {
 console.log("RESEND DATA:", data);
 console.log("RESEND ERROR:", error);
 
-return Response.json({ success: true, data, error });
+return Response.json({
+  success: true,
+  data,
+  error,
+});
   } catch (error) {
     console.error("CONTACT_API_ERROR:", error);
 
