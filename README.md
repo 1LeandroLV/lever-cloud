@@ -1,23 +1,19 @@
 # Lever Cloud
 
-A modern premium portfolio built with Next.js, TypeScript and Tailwind CSS to showcase web development projects, services and business solutions.
+A modern premium portfolio built with Next.js, TypeScript and Tailwind CSS to showcase professional web development projects, premium business websites and digital solutions.
 
-## 🌐 Live Demo
-
-**Website:** https://lever-cloud.vercel.app
-
-**Custom Domain:** https://levercloud.se *(coming soon)*
+🌐 **Live Website:** https://levercloud.se
 
 ---
 
-# ✨ Features
+## ✨ Features
 
-- Modern premium UI/UX
+- Premium modern UI/UX
 - Fully responsive design
 - Interactive project showcase
-- Dedicated About, Services and Contact pages
+- About, Services and Contact pages
 - Functional contact form
-- Email notifications powered by Resend
+- Email notifications with Resend
 - Fast performance with Next.js
 - SEO-friendly structure
 - Mobile-first design
@@ -25,9 +21,9 @@ A modern premium portfolio built with Next.js, TypeScript and Tailwind CSS to sh
 
 ---
 
-# 🛠 Tech Stack
+## 🛠️ Tech Stack
 
-- Next.js 15
+- Next.js
 - React
 - TypeScript
 - Tailwind CSS
@@ -36,17 +32,7 @@ A modern premium portfolio built with Next.js, TypeScript and Tailwind CSS to sh
 
 ---
 
-# 📁 Project Structure
-
-```text
-app/
-components/
-public/
-```
-
----
-
-# 🚀 Getting Started
+## 🚀 Getting Started
 
 Clone the repository
 
@@ -60,13 +46,13 @@ Install dependencies
 npm install
 ```
 
-Start the development server
+Run the development server
 
 ```bash
 npm run dev
 ```
 
-Open
+Open your browser
 
 ```
 http://localhost:3000
@@ -74,9 +60,17 @@ http://localhost:3000
 
 ---
 
-# 📸 Portfolio Highlights
+## 📁 Project Structure
 
-The portfolio includes:
+```text
+app/
+components/
+public/
+```
+
+---
+
+## 📸 What This Portfolio Includes
 
 - Premium landing pages
 - Business websites
@@ -87,12 +81,17 @@ The portfolio includes:
 
 ---
 
-# 📬 Contact
+## 🌍 Live Demo
 
-Interested in working together?
+**Website**
+https://levercloud.se
+
+---
+
+## 📬 Contact
 
 **Portfolio**
-https://lever-cloud.vercel.app
+https://levercloud.se
 
 **Email**
 leandro.lever.cloud@gmail.com
@@ -102,11 +101,11 @@ https://github.com/1LeandroLV
 
 ---
 
-# 👨‍💻 Author
+## 👨‍💻 Author
 
 **Leandro Verdugo**
 
-Backend Developer & Web Developer
+Backend Developer & Full Stack Web Developer
 
 Building modern websites, booking systems and digital solutions for businesses.
 
