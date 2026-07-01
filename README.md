@@ -1,71 +1,117 @@
 # Lever Cloud
 
-Modern portfolio website built with Next.js, TypeScript and Tailwind CSS.
+A modern premium portfolio built with Next.js, TypeScript and Tailwind CSS to showcase web development projects, services and business solutions.
 
-## Live Demo
+## 🌐 Live Demo
 
-https://lever-cloud.vercel.app
+**Website:** https://lever-cloud.vercel.app
 
-(levercloud.se kommer snart)
-
----
-
-## About
-
-Lever Cloud is my personal portfolio where I showcase premium websites and digital solutions that I build for businesses.
-
-The goal of this project is to demonstrate modern web development with clean UI, responsive design and production-ready code.
+**Custom Domain:** https://levercloud.se *(coming soon)*
 
 ---
 
-## Features
+# ✨ Features
 
-- Modern responsive design
-- Premium UI/UX
-- Contact form
-- Email integration with Resend
-- Animated components
-- Optimized for desktop and mobile
-- Deployed with Vercel
+- Modern premium UI/UX
+- Fully responsive design
+- Interactive project showcase
+- Dedicated About, Services and Contact pages
+- Functional contact form
+- Email notifications powered by Resend
+- Fast performance with Next.js
+- SEO-friendly structure
+- Mobile-first design
+- Deployed on Vercel
 
 ---
 
-## Built With
+# 🛠 Tech Stack
 
-- Next.js
+- Next.js 15
 - React
 - TypeScript
 - Tailwind CSS
-- Resend
+- Resend API
 - Vercel
 
 ---
 
-## Installation
+# 📁 Project Structure
+
+```text
+app/
+components/
+public/
+```
+
+---
+
+# 🚀 Getting Started
+
+Clone the repository
+
+```bash
+git clone https://github.com/1LeandroLV/lever-cloud.git
+```
+
+Install dependencies
 
 ```bash
 npm install
+```
+
+Start the development server
+
+```bash
 npm run dev
 ```
 
----
-
-## Folder Structure
+Open
 
 ```
-app/
-public/
-components/
+http://localhost:3000
 ```
 
 ---
 
-## Author
+# 📸 Portfolio Highlights
 
-Leandro Verdugo
+The portfolio includes:
 
-GitHub:
+- Premium landing pages
+- Business websites
+- Booking systems
+- Admin dashboards
+- Responsive web applications
+- Contact solutions with email integration
+
+---
+
+# 📬 Contact
+
+Interested in working together?
+
+**Portfolio**
+https://lever-cloud.vercel.app
+
+**Email**
+leandro.lever.cloud@gmail.com
+
+**GitHub**
 https://github.com/1LeandroLV
 
-Portfolio:
-https://lever-cloud.vercel.app
+---
+
+# 👨‍💻 Author
+
+**Leandro Verdugo**
+
+Backend Developer & Web Developer
+
+Building modern websites, booking systems and digital solutions for businesses.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
