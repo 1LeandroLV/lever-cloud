@@ -287,7 +287,7 @@ const [menuOpen, setMenuOpen] = useState(false);
               href="https://github.com/1LeandroLV"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-sm text-white hover:bg-blue-500/20"
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-sm text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-blue-500/20 hover:shadow-[0_0_25px_rgba(59,130,246,0.45)] active:scale-95"
             >
               <FaGithub />
             </a>
@@ -296,7 +296,7 @@ const [menuOpen, setMenuOpen] = useState(false);
               href="https://se.linkedin.com/in/leandro-v-37a970380"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-sm text-white hover:bg-blue-500/20"
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-sm text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-blue-500/20 hover:shadow-[0_0_25px_rgba(59,130,246,0.45)] active:scale-95"
             >
               <FaLinkedinIn />
             </a>
@@ -305,14 +305,14 @@ const [menuOpen, setMenuOpen] = useState(false);
               href="https://www.instagram.com/1leandro.v"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-sm text-white hover:bg-blue-500/20"
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-sm text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-blue-500/20 hover:shadow-[0_0_25px_rgba(59,130,246,0.45)] active:scale-95"
             >
               <FaInstagram />
             </a>
 
             <a
               href="mailto:leandro.lever.cloud@gmail.com"
-              className="flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-sm text-white hover:bg-blue-500/20"
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-white/5 text-sm text-white transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-blue-500/20 hover:shadow-[0_0_25px_rgba(59,130,246,0.45)] active:scale-95"
             >
               <MdEmail />
             </a>

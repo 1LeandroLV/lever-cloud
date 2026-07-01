@@ -26,7 +26,7 @@ export async function POST(req: Request) {
       `,
     });
 
-    console.log("RESEND_RESPONSE:", data);
+    console.log("RESEND_RESPONSE:", JSON.stringify(data, null, 2));
 return Response.json({ success: true, data });
   } catch (error) {
     console.error("CONTACT_API_ERROR:", error);
