@@ -12,7 +12,7 @@ export async function POST(req: Request) {
       );
     }
 
-    const data = await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: "Lever Cloud <onboarding@resend.dev>",
       to: ["leandro.lever.cloud@gmail.com"],
       subject: `Ny förfrågan från ${name}`,
@@ -26,8 +26,10 @@ export async function POST(req: Request) {
       `,
     });
 
-    console.log("RESEND_RESPONSE:", JSON.stringify(data, null, 2));
-return Response.json({ success: true, data });
+console.log("RESEND DATA:", data);
+console.log("RESEND ERROR:", error);
+
+return Response.json({ success: true, data, error });
   } catch (error) {
     console.error("CONTACT_API_ERROR:", error);
 
