@@ -164,13 +164,13 @@ export default function Home() {
 
           <div className="relative flex h-[480px] items-center justify-center md:h-[540px]">
             <div className="relative z-10 h-[400px] w-[320px] overflow-hidden rounded-[2rem] shadow-[0_0_40px_rgba(37,99,235,0.25)] md:h-[500px] md:w-[430px] md:shadow-[0_0_60px_rgba(37,99,235,0.35)]">
-             <Image
-  src="/images/leandro-profile.jpg"
-  alt="Leandro"
-  fill
-  priority
-  className="object-cover object-center"
-/>
+              <Image
+                src="/images/leandro-profile.jpg"
+                alt="Leandro"
+                fill
+                priority
+                className="object-cover object-center"
+              />
             </div>
           </div>
         </div>
@@ -208,12 +208,12 @@ export default function Home() {
                 className="max-w-2xl overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03]"
               >
                 {/* SCREENSHOT */}
-                <div className="relative h-[300px] w-full overflow-hidden border-b border-white/10 bg-[#07101f]">
+                <div className="relative h-[250px] w-full overflow-hidden border-b border-white/10 bg-[#07101f] sm:h-[300px]">
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-cover object-top"
+                    className="object-contain object-center p-2 sm:p-3"
                   />
                 </div>
 
